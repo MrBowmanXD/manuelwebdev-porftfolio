@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manuel Gonçalves | Desenvolvimento de Websites</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #34495e;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            background-color: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        section h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #3498db;
+        }
+
+        .cta {
+            text-align: center;
+            background-color: #3498db;
+            color: white;
+            padding: 3rem 2rem;
+        }
+
+        .cta h2 {
+            color: white;
+            border-bottom: 2px solid white;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: #3498db;
+            padding: 1rem 2rem;
+            margin-top: 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .service-card {
+            border: 1px solid #eee;
+            padding: 1.5rem;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .service-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .project-card {
+            border: 1px solid #eee;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 6px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .project-card h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-card a {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .project-card a:hover {
+            text-decoration: underline;
+        }
+
+        .exp-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .exp-item h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        #contacto ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        #contacto li {
+            margin-bottom: 0.5rem;
+        }
+
+        #contacto a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        #contacto a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #2c3e50;
+            color: white;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            main {
+                padding: 0 1rem;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+
+            .services {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Manuel Gonçalves</h1>
+        <p>Desenvolvimento de Websites Profissionais</p>
+        <nav>
+            <a href="#servicos">Serviços</a>
+            <a href="#portfolio">Portfólio</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#experiencia">Experiência</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cta">
+            <h2>Pronto para levar o seu negócio online?</h2>
+            <p>Crio websites modernos, responsivos e otimizados para converter visitantes em clientes.</p>
+            <p>Ideal para colaborações com agências ou projetos diretos com clientes.</p>
+            <a href="#contacto" class="cta-button">Solicitar Orçamento</a>
+        </section>
+
+        <section id="servicos">
+            <h2>Serviços</h2>
+            <div class="services">
+                <div class="service-card">
+                    <h3>Websites Institucionais</h3>
+                    <p>Sites profissionais para empresas e negócios locais que precisam de presença online.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Correção de Bugs</h3>
+                    <p>Identificação e resolução de problemas em aplicações web existentes.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Aplicações Web</h3>
+                    <p>Soluções web personalizadas com Ruby on Rails e tecnologias modernas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <h2>Portfólio</h2>
+            <div class="project-card">
+                <h3>mood_logger</h3>
+                <p>Plataforma onde os utilizadores podem registar o seu humor diário. Demonstração de desenvolvimento de aplicações web interativas.</p>
+                <a href="https://moodlogger-production.up.railway.app/" target="_blank">Ver Projeto</a>
+            </div>
+            <div class="project-card">
+                <h3>railswork.eu</h3>
+                <p>Blog técnico em inglês sobre desenvolvimento web e hardware, demonstrando capacidade de criar plataformas de conteúdo.</p>
+                <a href="https://railswork.eu" target="_blank">Visitar Site</a>
+            </div>
+            <div class="project-card">
+                <h3>manuelwebdev.pt</h3>
+                <p>Blog pessoal sobre tecnologia e reflexões, mostrando domínio de CMS e gestão de conteúdo.</p>
+                <a href="https://manuelwebdev.pt" target="_blank">Visitar Site</a>
+            </div>
+        </section>
+
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <p>Sou desenvolvedor web especializado na criação de websites profissionais para empresas e negócios. Com formação no IEFP e estágio de 9 meses em desenvolvimento web, ofereço soluções digitais que ajudam o seu negócio a crescer online.</p>
+            <p>Também colaboro com agências como freelancer, trazendo experiência em Ruby on Rails e contribuições ativas para projetos open source.</p>
+        </section>
+
+        <section id="experiencia">
+            <h2>Formação e Experiência</h2>
+            <div class="exp-item">
+                <h3>Estágio em Desenvolvimento Web</h3>
+                <p>9 meses de experiência prática em projetos reais de desenvolvimento web.</p>
+            </div>
+            <div class="exp-item">
+                <h3>Formação Profissional - IEFP</h3>
+                <p>Formação profissional concluída no Instituto de Emprego e Formação Profissional.</p>
+            </div>
+            <div class="exp-item">
+                <h3>Contribuições Open Source</h3>
+                <p>Contribuo ativamente para projetos de código aberto em Ruby on Rails, mantendo-me atualizado com as melhores práticas da indústria.</p>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Vamos trabalhar juntos?</h2>
+            <p>Seja para um projeto direto ou colaboração com a sua agência, estou disponível para discutir o seu próximo projeto.</p>
+            <ul>
+                <li>Email: mjsgoncalves.98@gmail.com</li>
+                <li><a href="https://manuelwebdev.pt" target="_blank">manuelwebdev.pt</a></li>
+                <li><a href="https://railswork.eu" target="_blank">railswork.eu</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Manuel Gonçalves - Desenvolvimento Web</p>
+    </footer>
+</body>
+</html>
